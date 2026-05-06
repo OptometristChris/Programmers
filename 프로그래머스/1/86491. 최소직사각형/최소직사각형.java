@@ -12,18 +12,10 @@ class Solution {
                 sizes[i][1] = sizes[i][0];
                 sizes[i][0] = temp;
             }
-            if(sol[0] < sizes[i][0]){
-                int temp = 0;
-                temp = sizes[i][0];
-                sizes[i][0] = sol[0];
-                sol[0] = temp;
-            }
-            if(sol[1] < sizes[i][1]){
-                int temp = 0;
-                temp = sizes[i][1];
-                sizes[i][1] = sol[1];
-                sol[1] = temp;
-            }
+            if(sol[0] < sizes[i][0])
+                sol[0] = sizes[i][0];
+            if(sol[1] < sizes[i][1])
+                sol[1] = sizes[i][1];
         }
         answer = sol[0] * sol[1];
         
